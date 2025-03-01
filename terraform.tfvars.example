@@ -1,0 +1,16 @@
+# Example Terraform variables file
+# Rename to terraform.tfvars and update with your values
+
+# Required variables
+project_id = "clgcporg10-141"  # Replace with your actual GCP project ID
+
+# Optional variables - uncomment and modify as needed
+region = "us-central1"
+zone = "us-central1-a"
+machine_type = "e2-medium"
+disk_size_gb = 20
+terraria_version = "1.4.4.9"
+# world_name = "terraform-world"
+world_size = 2  # 1=small, 2=medium, 3=large
+max_players = 8
+# server_password = ""  # Leave empty for no password
