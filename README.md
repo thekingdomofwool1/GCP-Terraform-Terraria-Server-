@@ -17,7 +17,7 @@ I would reccomend that once you have tested and confirmed that it works you go b
 
 ## Setup
 
-1. Clone or download this repository
+1. Clone this repository
 2. Create a `terraform.tfvars` file based on the provided example:
    ```bash
    cp terraform.tfvars.example terraform.tfvars
