@@ -2,7 +2,7 @@
 
 This Terraform module deploys a Terraria server on Google Cloud Platform (GCP). It creates a compute instance with a public IP address, installs the Terraria server software (from here: https://terraria.org/), and configures it to run as a systemd (https://systemd.io/) service.
 
-Run Terraform init and you'll be ready to go! The startup script will install and start the server. I wrote the startup script with the help of my assistent (Claude 3.7) and it includes some handy debugging mechanisms. 
+Run Terraform Init, Plan, Apply and you'll be ready to go! The startup script will install and start the server. I wrote the startup script with the help of my assistent (Claude 3.7) and it includes some handy debugging mechanisms. 
 
 After the Terraform Apply completes you will recieve as output the IP address of your new world. 
 
