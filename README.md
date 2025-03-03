@@ -62,7 +62,6 @@ Once connected, you can:
 - Restart the server: `sudo systemctl restart terraria`
 - View logs: `sudo journalctl -u terraria`
 - Access the server console: `screen -r terraria`
-  - To exit the console without stopping the server: Press `Ctrl+A` then `D`
 
 ## Server Files
 
@@ -74,7 +73,7 @@ Once connected, you can:
 
 You can customize the server by modifying the variables in your `terraform.tfvars` file:
 
-- `machine_type`: Change the VM size for better performance
+- `machine_type`: Change the VM size for better performance (you probably won't need to do this unless you really want to host a ton of people. I don't even know that many people who play Terraria)
 - `disk_size_gb`: Increase disk space for larger worlds
 - `world_size`: Set to 1 (small), 2 (medium), or 3 (large)
 - `max_players`: Set the maximum number of concurrent players
@@ -83,6 +82,8 @@ You can customize the server by modifying the variables in your `terraform.tfvar
 ## Troubleshooting
 
 ### Log Files
+
+This is where Claude was partiucarly helpful. I hadn't thought of adding all these debugging mechanisms. 
 
 There are several logs you can check to diagnose issues with the Terraria server:
 
@@ -135,7 +136,9 @@ The module installs Mono from the official repository and includes fixes to ensu
 
 ### Mono Compatibility Issues
 
-The Terraria server sometimes includes its own .NET library files (DLLs) that can conflict with the system's Mono installation. The startup script automatically handles this by:
+The following paragraph was added by Claude when I ran into some "Your mono runtime and class libraries are out of sync" errors. I simply let the robot solve this problem :) and its methodology is outlined below. Perhaps there was or is a better way to handle this; in which case, I'm all ears (or eyes). 
+
+The Terraria server includes its own .NET library files (DLLs) that can conflict with the system's Mono installation. The startup script automatically handles this by:
 
 1. Detecting and renaming any conflicting DLLs (like System.dll, mscorlib.dll)
 2. Forcing the server to use the system's Mono runtime libraries instead
