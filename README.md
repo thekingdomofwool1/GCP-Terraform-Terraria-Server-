@@ -1,4 +1,4 @@
-# GCP Terraria Server Terraform Module
+# Terraria Server in GCP with Terraform
 
 This Terraform module deploys a Terraria server on Google Cloud Platform (GCP). It creates a compute instance with a public IP address, installs the Terraria server software (from here: https://terraria.org/), and configures it to run as a systemd (https://systemd.io/) service.
 
