@@ -53,6 +53,7 @@ I would reccomend that once you have tested and confirmed that it works you go b
 You can SSH into the server to manage it. For conveniance sake, I prefer to use the built-in ssh feature on the compute instance console in gcp. 
 
 ## Here are some useful commands for sever management 
+(you probably don't need to run any of these as sudo but better safe than sorry)
 
 Once connected, you can:
 
