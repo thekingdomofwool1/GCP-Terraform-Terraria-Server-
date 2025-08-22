@@ -1,5 +1,5 @@
 name: "wiz-cli"
-on: [workflow_dispatch]
+on: [pull_request]
 
 jobs:
   wiz-cli-iac-scan:
