@@ -68,3 +68,4 @@ resource "google_compute_firewall" "terraria_ssh" {
   source_ranges = ["0.0.0.0/0"]
   target_tags   = ["terraria-server"]
 }
+## adding a test comment. 
